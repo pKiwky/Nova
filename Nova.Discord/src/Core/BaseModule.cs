@@ -1,7 +1,6 @@
 ﻿using DSharpPlus;
 using DSharpPlus.EventArgs;
 using Nova.Discord.Models;
-using Serilog;
 
 namespace Nova.Discord.Core {
 
