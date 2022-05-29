@@ -2,7 +2,6 @@
 using Nova.Discord.Core;
 using Nova.Discord.Managers;
 using Nova.MySQL;
-using Serilog;
 
 namespace Nova.Discord.Data {
 

@@ -4,11 +4,9 @@ using Serilog;
 namespace Nova.Discord.Modules {
 
     public class ExampleModule : BaseModule {
-        private ILogger _logger;
+        public override string ModuleName { get; set; } = "ExampleModule";
 
-        // public ExampleModule(ILogger logger) {
-        //     _logger = logger;
-        // }
+        private ILogger _logger;
 
         public override Task OnModuleLoaded() {
             // Code here...

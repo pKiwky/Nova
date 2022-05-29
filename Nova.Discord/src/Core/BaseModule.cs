@@ -6,18 +6,13 @@ using Serilog;
 namespace Nova.Discord.Core {
 
     public abstract class BaseModule {
-        public virtual string ModuleName { get; set; } = "Unnamed";
+        public abstract string ModuleName { get; set; }
         public static readonly List<BaseModule> Modules = new List<BaseModule>();
 
         public static void LoadModules() {
             var modulesAssembly = typeof(BaseModule)
                 .Assembly.GetTypes()
                 .Where(t => t.IsSubclassOf(typeof(BaseModule)) && !t.IsAbstract);
-
-            // ILogger logger = new LoggerConfiguration()
-            //     .WriteTo.Console()
-            //     .MinimumLevel.Debug()
-            //     .CreateLogger();
 
             foreach (var assembly in modulesAssembly) {
                 var module = (BaseModule) Activator.CreateInstance(assembly);
