@@ -1,7 +1,11 @@
 ﻿global using Snowflake = System.UInt64;
 using DSharpPlus;
+using DSharpPlus.EventArgs;
 using Nova.Discord.Core;
+using Nova.Discord.Data;
 using Nova.Discord.Events;
+using Nova.Discord.Managers;
+using Nova.Discord.Models;
 
 namespace Nova.Discord {
 
@@ -20,11 +24,22 @@ namespace Nova.Discord {
         }
 
         public async Task Run() {
+            _shardedClient.GuildAvailable += OnGuildAvailableInit;
+
             LoadEvents();
             BaseModule.LoadModules();
 
             await _shardedClient.StartAsync();
             await Task.Delay(-1);
+        }
+
+        private async Task OnGuildAvailableInit(DiscordClient client, GuildCreateEventArgs args) {
+            var novaGuild = new NovaGuild();
+
+            novaGuild.Settings = await DBSettings.LoadSettings(args.Guild.Id);
+
+            NovaManager.Instance().Guilds.TryAdd(args.Guild.Id, novaGuild);
+            await Task.CompletedTask;
         }
 
         private void LoadEvents() {

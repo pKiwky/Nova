@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nova.Discord", "Nova.Discor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nova.Shared", "Nova.Shared\Nova.Shared.csproj", "{15692449-BDE5-4271-8096-5DB6CDAB08BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nova.Database", "Nova.Database\Nova.Database.csproj", "{23DDF57A-B566-4256-9698-1E69CCCB8505}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{15692449-BDE5-4271-8096-5DB6CDAB08BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15692449-BDE5-4271-8096-5DB6CDAB08BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15692449-BDE5-4271-8096-5DB6CDAB08BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23DDF57A-B566-4256-9698-1E69CCCB8505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DDF57A-B566-4256-9698-1E69CCCB8505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DDF57A-B566-4256-9698-1E69CCCB8505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DDF57A-B566-4256-9698-1E69CCCB8505}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

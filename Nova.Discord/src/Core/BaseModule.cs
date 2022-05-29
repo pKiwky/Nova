@@ -14,13 +14,13 @@ namespace Nova.Discord.Core {
                 .Assembly.GetTypes()
                 .Where(t => t.IsSubclassOf(typeof(BaseModule)) && !t.IsAbstract);
 
-            ILogger logger = new LoggerConfiguration()
-                .WriteTo.Console()
-                .MinimumLevel.Debug()
-                .CreateLogger();
+            // ILogger logger = new LoggerConfiguration()
+            //     .WriteTo.Console()
+            //     .MinimumLevel.Debug()
+            //     .CreateLogger();
 
             foreach (var assembly in modulesAssembly) {
-                var module = (BaseModule) Activator.CreateInstance(assembly, logger);
+                var module = (BaseModule) Activator.CreateInstance(assembly);
 
                 Modules.Add(module);
                 module.OnModuleLoaded();
