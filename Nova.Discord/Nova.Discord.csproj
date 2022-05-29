@@ -14,6 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Nova.Database\Nova.Database.csproj" />
       <ProjectReference Include="..\Nova.Shared\Nova.Shared.csproj" />
     </ItemGroup>
 

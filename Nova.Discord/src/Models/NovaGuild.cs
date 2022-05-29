@@ -3,7 +3,7 @@
 namespace Nova.Discord.Models {
 
     public class NovaGuild {
-        public ConcurrentDictionary<string, object> Settings;
+        public Dictionary<string, object>? Settings;
 
         public NovaGuild() {
             Settings = new();
