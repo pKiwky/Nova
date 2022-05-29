@@ -289,6 +289,116 @@ namespace Nova.Discord.Core {
         public virtual Task OnMessageUpdated(NovaGuild novaGuild, DiscordClient client, MessageUpdateEventArgs args) {
             return Task.CompletedTask;
         }
+
+        /// <summary>
+        /// Sent when a user adds a reaction to a message..
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnMessageReactionAdded(NovaGuild novaGuild, DiscordClient client, MessageReactionAddEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when a user removes a reaction from a message.
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnMessageReactionRemoved(NovaGuild novaGuild, DiscordClient client, MessageReactionRemoveEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when a user explicitly removes all reactions from a message.
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnMessageReactionsCleared(NovaGuild novaGuild, DiscordClient client, MessageReactionsClearEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when multiple messages are deleted at once.
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnMessagesBulkDeleted(NovaGuild novaGuild, DiscordClient client, MessageBulkDeleteEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when a bot removes all instances of a given emoji from the reactions of a message.
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnMessageReactionRemovedEmoji(NovaGuild novaGuild, DiscordClient client, MessageReactionRemoveEmojiEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when a message is created.
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnChannelCreated(NovaGuild novaGuild, DiscordClient client, ChannelCreateEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when a message is deleted.
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnChannelDeleted(NovaGuild novaGuild, DiscordClient client, ChannelDeleteEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when a message is updated.
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnChannelUpdated(NovaGuild novaGuild, DiscordClient client, ChannelUpdateEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when a message is pinned or unpinned in a text channel.
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnChannelPinsUpdated(NovaGuild novaGuild, DiscordClient client, ChannelPinsUpdateEventArgs args) {
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sent when a dm channel is deleted .
+        /// </summary>
+        /// <param name="novaGuild">NovaGuild for this guild.</param>
+        /// <param name="client">Instance of client from shard.</param>
+        /// <param name="args">Events args.</param>
+        /// <returns></returns>
+        public virtual Task OnDmChannelDeleted(NovaGuild novaGuild, DiscordClient client, DmChannelDeleteEventArgs args) {
+            return Task.CompletedTask;
+        }
     }
 
 }
